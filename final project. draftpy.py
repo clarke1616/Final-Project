@@ -1,3 +1,8 @@
+###form 1040, 2022 Tax Year
+
+#print ("By running this program, you will be asked a series a questions that will be used to calculate the line items on your form 1040.")
+#print ("You will need access to your W-2 form as well as your 1099 -IOD form if you have recieved interest this tax year")
+
 ##Line 1 - Wages Salaries and Tips Etc
 a = int(input ("What was your total wages, salaries and tips for 2022 - this can be found in BOX 1 of your W-2."))
 b = input("Did you recieve any interest in 2022 from municiple (state) bonds? Y or N")
