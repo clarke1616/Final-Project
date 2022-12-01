@@ -1,26 +1,67 @@
-###form 1040, 2022 Tax Year
-
-#print ("By running this program, you will be asked a series a questions that will be used to calculate the line items on your form 1040.")
-#print ("You will need access to your W-2 form as well as your 1099 -IOD form if you have recieved interest this tax year")
-
 ##Line 1 - Wages Salaries and Tips Etc
+a = int(input ("What was your total wages, salaries and tips for 2022 - this can be found in BOX 1 of your W-2."))
+b = input("Did you recieve any interest in 2022 from municiple (state) bonds? Y or N")
+if b == 'Y' or b == 'y':
+        box2 = int(input ("What is box 2 on your 1099-OID?"))
+        box11 = int(input ("What is box 11 on your 1099-OID?"))
+else:
+     box2 =0
+     box11 = 0
+
 def wagesAndSalaries():
-     line1 = int(input ("What was your total wages, salaries and tips for 2022 - this can be found in BOX 1 of your W-2."))
+     #line1 = int(input ("What was your total wages, salaries and tips for 2022 - this can be found in BOX 1 of your W-2."))
+     line1 = a
      return line1
 
 
 ## Line 2a - Tax exempt Interest
 
 def exemptInterest ():
-    ei = input("Did you recieve any interest in 2022 from municiple (state) bonds? Y or N")
-    if ei == 'Y' or ei == 'y':
-        oidBox2 = int(input ("What is box 2 on your 1099-OID?"))
-        oidBox11 = int(input ("What is box 11 on your 1099-OID?"))
-        line2a =  oidBox2 + oidBox11
-        return line2a
-    else:
-        line2a = 0
-        return line2a
+    #ei = input("Did you recieve any interest in 2022 from municiple (state) bonds? Y or N")
+    #ei = b  
+    #if ei == 'Y' or ei == 'y':
+        #oidBox2 = int(input ("What is box 2 on your 1099-OID?"))
+        #oidBox11 = int(input ("What is box 11 on your 1099-OID?"))
+    b2 = box2
+    b11 = box11
+    line2a =  box2 + box11
+    return line2a
+    #else:
+        #line2a = 0
+        #return line2a
+
+        ##Line 1 - Wages Salaries and Tips Etc
+a = int(input ("What was your total wages, salaries and tips for 2022 - this can be found in BOX 1 of your W-2."))
+b = input("Did you recieve any interest in 2022 from municiple (state) bonds? Y or N")
+if b == 'Y' or b == 'y':
+        box2 = int(input ("What is box 2 on your 1099-OID?"))
+        box11 = int(input ("What is box 11 on your 1099-OID?"))
+else:
+     box2 =0
+     box11 = 0
+
+def wagesAndSalaries():
+     #line1 = int(input ("What was your total wages, salaries and tips for 2022 - this can be found in BOX 1 of your W-2."))
+     line1 = a
+     return line1
+
+
+## Line 2a - Tax exempt Interest
+
+def exemptInterest ():
+    #ei = input("Did you recieve any interest in 2022 from municiple (state) bonds? Y or N")
+    #ei = b  
+    #if ei == 'Y' or ei == 'y':
+        #oidBox2 = int(input ("What is box 2 on your 1099-OID?"))
+        #oidBox11 = int(input ("What is box 11 on your 1099-OID?"))
+    b2 = box2
+    b11 = box11
+    line2a =  box2 + box11
+    return line2a
+    #else:
+        #line2a = 0
+        #return line2a
+
 ##figure out how to get them all to print at the bottom
 #print ('Line 1 =' ,wagesAndSalaries())
 #print ('Line 2a = ', exemptInterest())
