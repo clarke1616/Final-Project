@@ -14,6 +14,7 @@ print ('            - 1099- DIV')
 print ('            - 1099- R')
 print ('            - SSA- 1099')
 print ('            - Schedual 1')
+print ('            - Form 8995')
 print ('            - Schedual D (if applicable)')
 print ('')
 print('')
@@ -84,6 +85,9 @@ deduction = input('are you filing as: A - Single B - Married Filing seperatly C-
 
 ##Line 12b
 don = int(input('How much did you donate to charity this year? **MAX $300 for single and $600 joint**'))
+
+##Line 13
+qbi = int(input('Looking at your form 8995, enter your Qualified Business Income:'))
 
 ################################################################################################################################################
 
@@ -207,6 +211,22 @@ def twelveC():
      twelveTotal = twelveb()+ deductions()
      return twelveTotal
 
+##Line 13
+def QBI():
+     busIncome = qbi
+     return busIncome
+
+##Line 14
+def add():
+     totalss = QBI()+ twelveC()
+     return totalss
+
+##Line 15
+def taxableIncome():
+     taxInc =  AGI () - add()
+     if taxInc <= 0:
+          taxInc = 0
+     return taxInc
 
 ################################################################################################################################################################
 print('')
@@ -236,6 +256,6 @@ print ('11 Subtract line 10 from line 9. This is your adjusted gross income . . 
 print ('12a Standard Deduction or itemized deductions (from schedule A) . . 12a', deductions())
 print ('  b Charitable contributions id you take the standard deduction . . 12b',twelveb())     
 print ('  c Add lines 12a and 12b . . . . . . . . . . . . . . . . . . . . . . . . . . .12c',twelveC())                     
-                      
-                     
-    
+print ('13 Qualified business income deduction from form 8995 . . . . . . . . . . . . .13 ', QBI())                      
+print ('14 Add lines 12c and 13 . . . . . . . . . . . . . . . . . . . . . . . . . . . .14 ', add())                    
+print ('15 Taxable Income. Subtract line 14 from line 11. If zero or less, enter -0- . 15 ', taxableIncome())
