@@ -1,6 +1,8 @@
+##Emily Clark, Senior Accounting Major
+
 ###form 1040, 2022 Tax Year
 
-##Personal Accountant
+###########################################################Personal Accountant
 
 
 print('Welcome! The personal account is ready to do your taxes!')
