@@ -1,6 +1,8 @@
 ###form 1040, 2022 Tax Year
 
-'''
+##Personal Accountant
+
+
 print('Welcome! The personal account is ready to do your taxes!')
 
 
@@ -18,7 +20,7 @@ print ('            - Form 8995')
 print ('            - Schedual D (if applicable)')
 print ('')
 print('')
-'''
+
 #############################################################################################################################################
 
 ##Inputs needed
@@ -48,7 +50,7 @@ qd = int(input ("Looking at line 1b on your 1099-DIV, please enter the number gi
 od = int(input ("Looking at line 1a on your 1099-DIV, please enter the number given"))
 
 ##For lines 4a and 4b
-r = input('Looking at your form 1099-R, is there any IRA Distrubutions being rolledover from previous years? (Y or N)')
+r = input('Looking at your form 1099-R, is there any IRA Distrubutions being rolled over from previous years? (Y or N)')
 if r == 'y' or r == 'Y':
      amount = int(input('How much is being rolled over?'))
 else:
